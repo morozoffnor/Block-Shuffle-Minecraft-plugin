@@ -245,7 +245,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.MAGENTA_WOOL);
 		blocks.add(Material.LIGHT_BLUE_WOOL);
 		blocks.add(Material.YELLOW_WOOL);
-		blocks.add(Material.LIME_WOOL);
 		blocks.add(Material.PINK_WOOL);
 		blocks.add(Material.GRAY_WOOL);
 		blocks.add(Material.LIGHT_GRAY_WOOL);
@@ -253,7 +252,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.PURPLE_WOOL);
 		blocks.add(Material.BLUE_WOOL);
 		blocks.add(Material.BROWN_WOOL);
-		blocks.add(Material.GREEN_WOOL);
 		blocks.add(Material.RED_WOOL);
 		blocks.add(Material.BLACK_WOOL);
 		
@@ -262,7 +260,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.MAGENTA_STAINED_GLASS);
 		blocks.add(Material.LIGHT_BLUE_STAINED_GLASS);
 		blocks.add(Material.YELLOW_STAINED_GLASS);
-		blocks.add(Material.LIME_STAINED_GLASS);
 		blocks.add(Material.PINK_STAINED_GLASS);
 		blocks.add(Material.GRAY_STAINED_GLASS);
 		blocks.add(Material.LIGHT_GRAY_STAINED_GLASS);
@@ -270,7 +267,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.PURPLE_STAINED_GLASS);
 		blocks.add(Material.BLUE_STAINED_GLASS);
 		blocks.add(Material.BROWN_STAINED_GLASS);
-		blocks.add(Material.GREEN_STAINED_GLASS);
 		blocks.add(Material.RED_STAINED_GLASS);
 		blocks.add(Material.BLACK_STAINED_GLASS);
 		
@@ -279,7 +275,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.MAGENTA_CONCRETE);
 		blocks.add(Material.LIGHT_BLUE_CONCRETE);
 		blocks.add(Material.YELLOW_CONCRETE);
-		blocks.add(Material.LIME_CONCRETE);
 		blocks.add(Material.PINK_CONCRETE);
 		blocks.add(Material.GRAY_CONCRETE);
 		blocks.add(Material.LIGHT_GRAY_CONCRETE);
@@ -287,7 +282,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.PURPLE_CONCRETE);
 		blocks.add(Material.BLUE_CONCRETE);
 		blocks.add(Material.BROWN_CONCRETE);
-		blocks.add(Material.GREEN_CONCRETE);
 		blocks.add(Material.RED_CONCRETE);
 		blocks.add(Material.BLACK_CONCRETE);
 		
@@ -296,7 +290,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.MAGENTA_CONCRETE_POWDER);
 		blocks.add(Material.LIGHT_BLUE_CONCRETE_POWDER);
 		blocks.add(Material.YELLOW_CONCRETE_POWDER);
-		blocks.add(Material.LIME_CONCRETE_POWDER);
 		blocks.add(Material.PINK_CONCRETE_POWDER);
 		blocks.add(Material.GRAY_CONCRETE_POWDER);
 		blocks.add(Material.LIGHT_GRAY_CONCRETE_POWDER);
@@ -304,7 +297,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.PURPLE_CONCRETE_POWDER);
 		blocks.add(Material.BLUE_CONCRETE_POWDER);
 		blocks.add(Material.BROWN_CONCRETE_POWDER);
-		blocks.add(Material.GREEN_CONCRETE_POWDER);
 		blocks.add(Material.RED_CONCRETE_POWDER);
 		blocks.add(Material.BLACK_CONCRETE_POWDER);
 		
@@ -313,7 +305,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.MAGENTA_TERRACOTTA);
 		blocks.add(Material.LIGHT_BLUE_TERRACOTTA);
 		blocks.add(Material.YELLOW_TERRACOTTA);
-		blocks.add(Material.LIME_TERRACOTTA);
 		blocks.add(Material.PINK_TERRACOTTA);
 		blocks.add(Material.GRAY_TERRACOTTA);
 		blocks.add(Material.LIGHT_GRAY_TERRACOTTA);
@@ -321,7 +312,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.PURPLE_TERRACOTTA);
 		blocks.add(Material.BLUE_TERRACOTTA);
 		blocks.add(Material.BROWN_TERRACOTTA);
-		blocks.add(Material.GREEN_TERRACOTTA);
 		blocks.add(Material.RED_TERRACOTTA);
 		blocks.add(Material.BLACK_TERRACOTTA);
 		
@@ -330,7 +320,6 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.MAGENTA_GLAZED_TERRACOTTA);
 		blocks.add(Material.LIGHT_BLUE_GLAZED_TERRACOTTA);
 		blocks.add(Material.YELLOW_GLAZED_TERRACOTTA);
-		blocks.add(Material.LIME_GLAZED_TERRACOTTA);
 		blocks.add(Material.PINK_GLAZED_TERRACOTTA);
 		blocks.add(Material.GRAY_GLAZED_TERRACOTTA);
 		blocks.add(Material.LIGHT_GRAY_GLAZED_TERRACOTTA);
@@ -338,12 +327,34 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.PURPLE_GLAZED_TERRACOTTA);
 		blocks.add(Material.BLUE_GLAZED_TERRACOTTA);
 		blocks.add(Material.BROWN_GLAZED_TERRACOTTA);
-		blocks.add(Material.GREEN_GLAZED_TERRACOTTA);
 		blocks.add(Material.RED_GLAZED_TERRACOTTA);
 		blocks.add(Material.BLACK_GLAZED_TERRACOTTA);
 		
+		blocks.add(Material.RED_BED);
+		blocks.add(Material.BLACK_BED);
+		blocks.add(Material.ORANGE_BED);
+		blocks.add(Material.MAGENTA_BED);
 		
+		blocks.add(Material.REDSTONE_LAMP);
+		blocks.add(Material.NOTE_BLOCK);
+		blocks.add(Material.TNT);
+		blocks.add(Material.PISTON);
 		
+		blocks.add(Material.HOPPER);
+		blocks.add(Material.RAIL);
+		
+		blocks.add(Material.LOOM);
+		blocks.add(Material.COMPOSTER);
+		blocks.add(Material.BARREL);
+		blocks.add(Material.SMOKER);
+		blocks.add(Material.BLAST_FURNACE);
+		blocks.add(Material.CARTOGRAPHY_TABLE);
+		blocks.add(Material.FLETCHING_TABLE);
+		blocks.add(Material.GRINDSTONE);
+		blocks.add(Material.SMITHING_TABLE);
+		blocks.add(Material.STONECUTTER);
+		blocks.add(Material.BELL);
+		blocks.add(Material.CAMPFIRE);
 		
 	}
 	
