@@ -17,6 +17,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.scheduler.BukkitRunnable;
 
 import ml.govnoed.BlockShuffle.Data.DataManager;
 import net.md_5.bungee.api.ChatColor;
@@ -32,6 +33,9 @@ public class Main extends JavaPlugin implements Listener {
 	List<String> activePlayers = new ArrayList<String>();
 	Map<String, String> playersBlocks = new HashMap<String, String>();
 	Map<String, Boolean> playerDone = new HashMap<String, Boolean>();
+	
+	
+	public int taskId;
 	
 	
 	@Override
@@ -51,6 +55,26 @@ public class Main extends JavaPlugin implements Listener {
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		
 		if(label.equalsIgnoreCase("start")) {
+			
+			BukkitRunnable timer = new BukkitRunnable() {
+
+				@Override
+				public void run() {					
+					gameActive = false;
+					activePlayers.clear();
+					playerDone.clear();
+					
+					Bukkit.getServer().broadcastMessage(ChatColor.RED + "Times's up! Send "+ ChatColor.WHITE + "/start " + ChatColor.RED + "to play one more round!");
+				}
+				
+			};
+			
+			timer.runTaskLater(this, 20L * 300);
+			taskId = timer.getTaskId();
+			
+			Bukkit.getServer().broadcastMessage("=======================");
+			Bukkit.getServer().broadcastMessage(ChatColor.GREEN + "The game has started! You have " + ChatColor.WHITE + "5 minutes" + ChatColor.GREEN + " to complete the task!");
+						
 
 			for (Player player : Bukkit.getOnlinePlayers()) {
 				Random random = new Random();
@@ -66,6 +90,7 @@ public class Main extends JavaPlugin implements Listener {
 				playerDone.put(player.getName(), false);
 
 				player.sendMessage(ChatColor.GREEN + "Your block is " + ChatColor.WHITE + material.name());
+				player.sendMessage("=======================");
 			}
 		}
 		gameActive = true;
@@ -83,6 +108,8 @@ public class Main extends JavaPlugin implements Listener {
 		Bukkit.getServer().getScoreboardManager().getMainScoreboard().getObjective("BlockShuffle").unregister();
 	}
 	
+	
+	
 	@EventHandler
 	public void onMove(PlayerMoveEvent event) {
 		Location loc = event.getPlayer().getLocation().clone().subtract(0, 1, 0);
@@ -95,7 +122,7 @@ public class Main extends JavaPlugin implements Listener {
 					
 
 					
-					Bukkit.getServer().broadcastMessage(ChatColor.GOLD + player.getName() + " is done! Their block was " + playersBlocks.get(player.getName()));
+					Bukkit.getServer().broadcastMessage(ChatColor.GOLD + player.getName() + ChatColor.GREEN +" is done! Their block was " + ChatColor.WHITE + playersBlocks.get(player.getName()));
 					
 					playerDone.put(player.getName(), true);
 					
@@ -107,10 +134,11 @@ public class Main extends JavaPlugin implements Listener {
 						
 						activePlayers.clear();
 						playerDone.clear();
+						Bukkit.getScheduler().cancelTask(taskId);
 
-						
-						Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "The game is over! Good job!");
-						Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Type /start if you want to play again.");
+						Bukkit.getServer().broadcastMessage(" ");
+						Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "All players are done! Good job!");
+						Bukkit.getServer().broadcastMessage(ChatColor.GOLD + "Type " + ChatColor.WHITE + "/start " + ChatColor.GOLD + "if you want to play again.");
 						return;
 					}
 				}
@@ -132,6 +160,11 @@ public class Main extends JavaPlugin implements Listener {
 		return true;
 		
 	}
+	
+	
+	
+	
+	
 	
 	public void setblocks() {
 		blocks.add(Material.STONE);
