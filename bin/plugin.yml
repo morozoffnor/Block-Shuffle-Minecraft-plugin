@@ -1,0 +1,8 @@
+main: ml.govnoed.BlockShuffle.Main
+name: BlockShuffle
+author: morozoff
+version: 1.0
+api-version: 1.16
+
+commands:
+  start: 
