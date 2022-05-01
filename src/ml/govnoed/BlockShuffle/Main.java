@@ -355,6 +355,11 @@ public class Main extends JavaPlugin implements Listener {
 		blocks.add(Material.STONECUTTER);
 		blocks.add(Material.BELL);
 		blocks.add(Material.CAMPFIRE);
+
+		// 1.17+ blocks
+		blocks.add(Material.COPPER_ORE);
+		blocks.add(Material.DEEPSLATE);
+
 		
 	}
 	
